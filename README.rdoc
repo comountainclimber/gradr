@@ -1,3 +1,12 @@
 == README
+1.) Verify <code>ruby</code> is installed on your machine with <code>ruby -v</code> in a terminal window. Download can be found here - https://www.ruby-lang.org/en/documentation/installation
 
-* <code>bundle install</code> <code>rails server</code> and visit <code>localhost:3000</code> to see her in action
+2.) This application relies on http://bundler.io which can be installed with <code>gem install bundler</code>
+
+3.) Install Rails with <code>gem install rails</code> more info here:http://guides.rubyonrails.org/getting_started.html
+
+4.) Run the following commands:
+* <code>bundle install</code>
+* <code>rails server</code>  
+
+5.) visit <code>localhost:3000</code> to see the demo in action.
