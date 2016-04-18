@@ -1,0 +1,5 @@
+<form class="form-group add-student-form repeat-animation" ng-show="addingStudent" ng-submit="enterNewStudent()">
+  <input type="text" required class="form-control name-input" autofocus placeholder="STUDENT NAME" ng-model="newStudent.name">
+  <input type="number" min="0" max="125" required class="form-control grade-input" placeholder="GRADE" ng-model="newStudent.grade">
+  <input class="btn-lg btn-success submit-button" type="submit" value="SUBMIT">
+</form>

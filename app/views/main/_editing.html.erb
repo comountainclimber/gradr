@@ -1,0 +1,40 @@
+<div ng-show="editingStudent" class="student-grade-chart table-responsive">
+  <form ng-submit="editStudentInfo()">
+    <table class="table">
+      <tr class="table-header">
+        <th>
+        </th>
+        <th ng-click="doSort('name')" class="pointer">
+          STUDENT
+        </th>
+        <th ng-click="doSort('grade')" class="pointer">
+          SCORE
+        </th>
+        <th>
+        </th>
+      </tr>
+      <tr ng-repeat="student in students | orderBy:sortBy:reverse" class="repeat-animation">
+        <th class="text-center" ng-class="{'failing-grade-highlight': student.failing,'honor-roll-highlight': student.hasHighGrade}"> {{$index + 1}} </th>
+        <td>
+          <input type="text" required class="form-control" ng-model="student.name">
+        </td>
+        <td >
+          <input type="number" min="0" max="125" required class="form-control" ng-model="student.grade">
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr class="submit-button-row">
+        <td>
+        </td>
+        <td>
+        </td>
+        <td class="text-center">
+          <input class="btn-lg btn-success " type="submit" value="SUBMIT">
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

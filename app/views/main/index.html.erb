@@ -1,0 +1,18 @@
+<div ng-controller="MyController">
+  <div class="container-fluid">
+    <div class="navigation">
+      <h1>Gradr</h1>
+      <p>keeping track of your student's grades has never been easier.</p>
+    </div>
+    <div class="row text-center">
+      <button ng-click="addStudent()" ng-disabled="disableAddStudent" class="btn btn-lg btn-success" >
+        <span class="glyphicon glyphicon-plus" />
+      </button>
+      <button ng-click="editStudentInfo()" ng-disabled="disableEditList" class="btn btn-lg btn-warning" >
+        <span class="glyphicon glyphicon-pencil" />
+      </button>
+    </div>
+    <%= render 'students' %>
+  </div>
+    <%= render 'footer' %>
+</div>

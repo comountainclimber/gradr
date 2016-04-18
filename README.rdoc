@@ -1,0 +1,3 @@
+== README
+
+* <code>bundle install</code> <code>rails server</code> and visit <code>localhost:3000</code> to see her in action

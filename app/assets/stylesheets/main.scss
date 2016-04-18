@@ -1,0 +1,139 @@
+@import 'bootstrap';
+@import 'ng-animations';
+@import 'footer';
+@import 'global-variables';
+
+html {
+  background-color: $main-body;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  background-color: $main-body;
+  margin-bottom: 90px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  border-bottom: 1px solid rgba(38, 50, 72, 0.23);
+}
+
+.ng-hide.ng-hide-animate {
+  display: none !important;
+}
+
+.container-fluid {
+  background-color: $main-body;
+}
+
+.add-student-form {
+  background-color: rgba(63, 58, 58, 0.63);
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+
+  .name-input {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 250px;
+  }
+
+  .grade-input {
+    @extend .name-input;
+  }
+}
+
+.navigation {
+  background-color: $nav;
+  border-bottom: solid thin $black;
+  color: $white;
+  margin: -20px -15px 20px;
+  padding: 10px 10px 0;
+
+  h1 {
+    font-size: 60px;
+    margin-bottom: 0;
+    margin-left: 30px;
+    text-shadow: 2px 2px 2px $black;
+  }
+
+  p {
+    font-weight: 200;
+    margin-left: 10px;
+    width: 250px;
+  }
+}
+
+.summary-table {
+  background-color: $white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: auto;
+  margin-top: 10px;
+  transition: all 0.2s ease-in-out;
+  width: 175px;
+
+  .summary-data {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.student-grade-chart { 
+  background-color: $white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  transition: all 0.2s ease-in-out;
+  width: 575px;
+
+  @media (max-width: 768px) {
+    width: 75%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .table {
+    margin-bottom: 0px; 
+  }
+
+  .failing-grade-highlight {
+    background-color: #B13733;
+    color: $white;
+  }
+
+  .honor-roll-highlight {
+    background-color: rgba(255, 215, 0, 0.36);
+  }
+
+  th {
+    font-size: 20px;
+  }
+
+  .submit-button-row td {
+    border: none;
+  }
+
+
+}
+
+.student-grade-chart:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}

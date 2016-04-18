@@ -1,0 +1,29 @@
+<%= render 'adding_student' %>
+<%= render 'summary_table' %>
+<div ng-show="!editingStudent" class="student-grade-chart table-responsive">
+  <table class="table">
+    <tr class="table-header">
+      <th>
+      </th>
+      <th ng-click="doSort('name')" class="pointer">
+        STUDENT
+      </th>
+      <th ng-click="doSort('grade')" class="pointer">
+        SCORE
+      </th>
+      <th>
+      </th>
+    </tr>
+    <tr ng-repeat="student in students | orderBy:sortBy:reverse" class="repeat-animation">
+      <th class="text-center" ng-class="{'failing-grade-highlight': student.failing,'honor-roll-highlight': student.hasHighGrade}"> {{$index + 1}} </th>
+      <td ng-class="{'failing-grade-highlight': student.failing,'honor-roll-highlight': student.hasHighGrade}"> {{student.name}} </td>
+      <td ng-class="{'failing-grade-highlight': student.failing,'honor-roll-highlight': student.hasHighGrade}"> {{student.grade}} </td>
+      <td class="text-center" ng-class="{'failing-grade-highlight': student.failing,'honor-roll-highlight': student.hasHighGrade}">
+        <button class="btn-xs btn-danger" ng-click="deleteStudent(student)">
+        <span class="glyphicon glyphicon-remove" />
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <%= render 'editing' %>
